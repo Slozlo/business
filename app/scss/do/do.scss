@@ -1,0 +1,16 @@
+@import "../mixins/mixins.scss";
+
+.do {
+  padding: 60px 0 100px 0;
+  background-color: #f2f2f2;
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    @include sub_title();
+  }
+}

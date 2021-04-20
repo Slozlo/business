@@ -1,0 +1,82 @@
+@import "../variables/variables.scss";
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .content {
+    max-width: 385px;
+
+    &__title {
+      font-family: "PFEncoreSansPro-Medium";
+      font-size: 28px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 9px;
+        height: 33px;
+        background-color: $main-color;
+        position: relative;
+        left: -4px;
+        top: -2px;
+      }
+      // &:before {
+      //   left: 2px;
+      //   top: -2px;
+      // }
+    }
+
+    &__text {
+      font-family: "PFEncoreSansPro-Light";
+      font-size: 15px;
+      color: #afaaaa;
+      line-height: 22px;
+      margin: 20px 0 35px 0;
+    }
+
+    &__btn {
+      button {
+        border: 1px solid #fc635e;
+        color: #fff;
+        font-family: "PFEncoreSansPro-Light";
+        font-size: 24px;
+        padding: 10px 32px;
+        // width: 165px;
+        background: #fc635e;
+        border-radius: 10px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .content__title {
+        &:before {
+          display: none;
+        }
+        &:after {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          width: 9px;
+          height: 33px;
+          background-color: $main-color;
+          position: relative;
+          right: -4px;
+          top: -2px;
+        }
+      }
+    }
+  }
+
+  &__img {
+  }
+}

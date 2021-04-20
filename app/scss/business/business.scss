@@ -1,0 +1,32 @@
+@import "../mixins/mixins.scss";
+
+.business {
+  width: 100%;
+  height: 485px;
+  background-image: url("../images/business/bcg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 90px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__content {
+    padding: 100px;
+    border: 9px solid rgba(64, 82, 100, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include title();
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    button {
+      @include button();
+    }
+  }
+}

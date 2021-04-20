@@ -1,0 +1,126 @@
+@import "../mixins/mixins.scss";
+@import "../variables/variables.scss";
+
+.portfolio {
+  padding: 80px 0;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include sub_title();
+  }
+
+  &__menu {
+    width: 100%;
+    border-top: 1px solid #7d7d7d;
+    border-bottom: 1px solid #7d7d7d;
+    padding: 5px 0;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        list-style: none;
+        font-family: "PFEncoreSansPro-Light";
+        font-size: 20px;
+        color: #000;
+
+        &:hover {
+          cursor: pointer;
+          color: $main-color;
+        }
+
+        span {
+          color: #7d7d7d;
+        }
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
+  }
+
+  &__item {
+    position: relative;
+    margin: 20px;
+
+    // &:not(:last-child) {
+    //   margin-right: 25px;
+    // }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .more {
+      display: none;
+      position: absolute;
+      top: 0;
+      background: $main-color;
+      width: 100%;
+      opacity: 0.5;
+      height: 100%;
+
+      &__content {
+        display: none;
+        position: absolute;
+        padding: 11px;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 30px;
+      }
+
+      &__icon {
+        display: flex;
+        justify-content: center;
+        font-family: "PFEncoreSansPro-Bold";
+        font-size: 105px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      .more {
+        display: block;
+
+        &__content {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+
+    button {
+      border: 1px solid #fc635e;
+      color: #fff;
+      font-family: "PFEncoreSansPro-Light";
+      font-size: 24px;
+      padding: 10px 32px;
+      // width: 165px;
+      background: #fc635e;
+      border-radius: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.bike {
+  display: none;
+}
